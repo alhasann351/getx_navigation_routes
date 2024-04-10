@@ -38,7 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   backgroundColor: Colors.blue,
                 ),
                   onPressed: () {
-                  Get.to(const NextScreen(name: 'Hasan',));
+                  //Get.to(const NextScreen(name: 'Hasan',));
+                    Get.toNamed('/nextScreen');
                   },
                   child: const Text(
                     'Next Screen',

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_navigation_routes/next_screen.dart';
+import 'package:getx_navigation_routes/screen.dart';
 
 import 'my_home_page.dart';
 
@@ -12,9 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: const MyHomePage(),
+      getPages: [
+        GetPage(name: '/', page: () => const MyHomePage()),
+        GetPage(name: '/nextScreen', page: () => const NextScreen()),
+        GetPage(name: '/screen', page: () => const Screen()),
+      ],
     );
   }
 }

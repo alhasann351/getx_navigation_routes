@@ -37,7 +37,8 @@ class _ScreenState extends State<Screen> {
                     backgroundColor: Colors.blue,
                   ),
                   onPressed: () {
-                    Get.back();
+                    //Get.back();
+                    Get.toNamed('/');
                   },
                   child: const Text(
                     'Go to Next Page',

@@ -40,7 +40,8 @@ class _NextScreenState extends State<NextScreen> {
                   ),
                   onPressed: () {
                     //Get.back();
-                    Get.to(const Screen());
+                    //Get.to(const Screen());
+                    Get.toNamed('/screen');
                   },
                   child: const Text(
                     'Go to Home Page',
