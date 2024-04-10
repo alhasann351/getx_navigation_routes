@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 import 'package:getx_navigation_routes/screen.dart';
 
 class NextScreen extends StatefulWidget {
-  const NextScreen({super.key});
+  final String name;
+  const NextScreen({super.key, this.name=''});
 
   @override
   State<NextScreen> createState() => _NextScreenState();
@@ -16,9 +17,9 @@ class _NextScreenState extends State<NextScreen> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.blue,
-        title: const Text(
-          'Next Screen',
-          style: TextStyle(
+        title: Text(
+          'Next Screen${widget.name}',
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22,
             color: Colors.white,
