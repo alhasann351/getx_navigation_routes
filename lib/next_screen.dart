@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_navigation_routes/next_screen.dart';
+import 'package:getx_navigation_routes/screen.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class NextScreen extends StatefulWidget {
+  const NextScreen({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<NextScreen> createState() => _NextScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _NextScreenState extends State<NextScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         backgroundColor: Colors.blue,
         title: const Text(
-          'GetX Navigation Routes',
+          'Next Screen',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22,
@@ -32,16 +32,17 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             SizedBox(
               height: 50,
-              width: 200,
+              width: 250,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                  ),
                   onPressed: () {
-                  Get.to(const NextScreen());
+                    //Get.back();
+                    Get.to(const Screen());
                   },
                   child: const Text(
-                    'Next Screen',
+                    'Go to Home Page',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
