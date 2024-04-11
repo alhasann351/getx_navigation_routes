@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:getx_navigation_routes/next_screen.dart';
 
@@ -15,6 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.blue,
         title: const Text(
           'GetX Navigation Routes',
@@ -39,7 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                   onPressed: () {
                   //Get.to(const NextScreen(name: 'Hasan',));
-                    Get.toNamed('/nextScreen');
+                    Get.toNamed('/nextScreen', arguments: [
+                      'Hasan',
+                      'Al-Hasan'
+                    ]);
                   },
                   child: const Text(
                     'Next Screen',

@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:getx_navigation_routes/screen.dart';
 
 class NextScreen extends StatefulWidget {
-  final String name;
-  const NextScreen({super.key, this.name=''});
+  var name;
+  NextScreen({super.key, this.name});
 
   @override
   State<NextScreen> createState() => _NextScreenState();
@@ -18,7 +18,7 @@ class _NextScreenState extends State<NextScreen> {
         centerTitle: true,
         backgroundColor: Colors.blue,
         title: Text(
-          'Next Screen${widget.name}',
+          'Next Screen${Get.arguments[1]}',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22,
