@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        automaticallyImplyLeading: false,
+        //automaticallyImplyLeading: false,
         backgroundColor: Colors.blue,
         title: const Text(
           'GetX Navigation Routes',

@@ -38,7 +38,9 @@ class _ScreenState extends State<Screen> {
                   ),
                   onPressed: () {
                     //Get.back();
-                    Get.toNamed('/');
+                    //Get.toNamed('/');
+                    //Get.offAll('/');
+                    Get.offAllNamed('/');
                   },
                   child: const Text(
                     'Go to Next Page',
